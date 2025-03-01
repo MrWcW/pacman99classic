@@ -1,5 +1,9 @@
+/* General Styles */
 body {
   background-color: black;
+  width: 342px; /* Default width for small screens */
+  margin: 0px auto;
+  font-family: sans-serif;
 }
 
 #pacman {
@@ -12,7 +16,7 @@ body {
 #shim {
   font-family: 'Permanent Marker', cursive;
   position: absolute;
-  visibility: hidden
+  visibility: hidden;
 }
 
 h1 {
@@ -21,13 +25,56 @@ h1 {
   color: yellow;
 }
 
-body {
-  width: 342px;
-  margin: 0px auto;
-  font-family: sans-serif;
-}
-
 a {
   text-decoration: none;
   color: #0000FF;
 }
+
+/* Mobile Controls Styling */
+#mobile-controls {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.controls-row {
+  display: flex;
+  justify-content: center;
+}
+
+.control-button {
+  width: 60px; /* Default button size */
+  height: 60px; /* Default button size */
+  margin: 5px;
+  font-size: 24px; /* Default font size */
+  text-align: center;
+  line-height: 60px; /* Center text vertically */
+  background-color: #ffcc00; /* Button color */
+  border-radius: 10px; /* Rounded corners */
+  border: none; /* Remove border for cleaner look */
+}
+
+.control-button:hover {
+  background-color: #ffaa00; /* Hover effect */
+}
+
+.control-button:active {
+  background-color: #ff9900; /* Active state effect */
+}
+
+/* Responsive Styles for Mobile Devices */
+@media only screen and (max-width: 768px) {
+  
+  /* Adjust Body for Small Screens */
+  body {
+    width: auto; /* Allow full width on mobile */
+    margin-left: auto; 
+    margin-right:auto
+}
+
+#pacman{
+padding
