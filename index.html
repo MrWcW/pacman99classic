@@ -23,21 +23,10 @@
       background-color: black; /* Ensure it blends with the background */
     }
 
-    #shim {
-      font-family: 'Permanent Marker', cursive;
-      position: absolute;
-      visibility: hidden;
-    }
-
     h1 {
       font-family: 'Permanent Marker', cursive;
       text-align: center;
       color: yellow;
-    }
-
-    a {
-      text-decoration: none;
-      color: #0000FF;
     }
 
     /* Mobile Controls Styling */
@@ -75,10 +64,30 @@
     .control-button:active {
       background-color: #ff9900; /* Active state effect */
     }
+  </style>
+</head>
+<body>
 
-    /* Responsive Styles for Mobile Devices */
-    @media only screen and (max-width: 768px) {
-      
-        body {
-            width:auto;margin-left:auto;margin-right:auto
-        }
+<h1>HTML5 Pac-Man</h1>
+
+<div id="pacman"></div>
+
+<!-- Mobile Controls -->
+<div id="mobile-controls">
+  <div class="controls-row">
+    <div class="control-button" id="up">▲</div>
+  </div>
+  <div class="controls-row">
+    <div class="control-button" id="left">◀</div>
+    <div style="width: 60px;"></div> <!-- Spacer -->
+    <div class="control-button" id="right">▶</div>
+  </div>
+  <div class="controls-row">
+    <div class="control-button" id="down">▼</div>
+  </div>
+</div>
+
+<script src="./script.js"></script>
+
+</body>
+</html>
