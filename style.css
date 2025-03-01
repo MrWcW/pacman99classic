@@ -1,16 +1,18 @@
 /* General Styles */
 body {
   background-color: black;
-  width: 342px; /* Default width for small screens */
-  margin: 0px auto;
+  margin: 0;
   font-family: sans-serif;
+  text-align: center; /* Center content horizontally */
 }
 
 #pacman {
-  height: 470px;
-  width: 382px;
+  height: 470px; /* Fixed height for the game canvas */
+  width: 382px; /* Fixed width for the game canvas */
   border-radius: 5px;
-  margin: 20px auto;
+  margin: 20px auto; /* Center the canvas */
+  display: block; /* Ensure the canvas is treated as a block element */
+  background-color: black; /* Ensure it blends with the background */
 }
 
 #shim {
@@ -33,7 +35,7 @@ a {
 /* Mobile Controls Styling */
 #mobile-controls {
   position: fixed;
-  bottom: 20px;
+  bottom: 20px; /* Place controls at the bottom of the screen */
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -47,19 +49,19 @@ a {
 }
 
 .control-button {
-  width: 60px; /* Default button size */
-  height: 60px; /* Default button size */
+  width: 60px; /* Size of each button */
+  height: 60px;
   margin: 5px;
-  font-size: 24px; /* Default font size */
+  font-size: 24px; /* Font size for arrows */
   text-align: center;
   line-height: 60px; /* Center text vertically */
   background-color: #ffcc00; /* Button color */
   border-radius: 10px; /* Rounded corners */
-  border: none; /* Remove border for cleaner look */
+  border: none; /* Remove default border */
 }
 
 .control-button:hover {
-  background-color: #ffaa00; /* Hover effect */
+  background-color: #ffaa00; /* Hover effect for buttons */
 }
 
 .control-button:active {
@@ -69,12 +71,7 @@ a {
 /* Responsive Styles for Mobile Devices */
 @media only screen and (max-width: 768px) {
   
-  /* Adjust Body for Small Screens */
-  body {
-    width: auto; /* Allow full width on mobile */
-    margin-left: auto; 
-    margin-right:auto
+    body {
+        width: auto; /* Allow full width on mobile devices */
+        margin-left:auto;margin-right:auto
 }
-
-#pacman{
-padding
