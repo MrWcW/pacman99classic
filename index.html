@@ -3,85 +3,82 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HTML5 Pacman</title>
-  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Permanent+Marker'>
-  <link rel="stylesheet" href="./style.css">
+  <title>HTML5 Pac-Man</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Permanent+Marker">
   <style>
+    /* General Styles */
+    body {
+      background-color: black;
+      margin: 0;
+      font-family: sans-serif;
+      text-align: center; /* Center content horizontally */
+    }
+
+    #pacman {
+      height: 470px; /* Fixed height for the game canvas */
+      width: 382px; /* Fixed width for the game canvas */
+      border-radius: 5px;
+      margin: 20px auto; /* Center the canvas */
+      display: block; /* Ensure the canvas is treated as a block element */
+      background-color: black; /* Ensure it blends with the background */
+    }
+
+    #shim {
+      font-family: 'Permanent Marker', cursive;
+      position: absolute;
+      visibility: hidden;
+    }
+
+    h1 {
+      font-family: 'Permanent Marker', cursive;
+      text-align: center;
+      color: yellow;
+    }
+
+    a {
+      text-decoration: none;
+      color: #0000FF;
+    }
+
     /* Mobile Controls Styling */
     #mobile-controls {
       position: fixed;
-      bottom: 20px;
+      bottom: 20px; /* Place controls at the bottom of the screen */
       left: 50%;
       transform: translateX(-50%);
       display: flex;
       flex-direction: column;
       align-items: center;
     }
+
     .controls-row {
       display: flex;
       justify-content: center;
     }
+
     .control-button {
-      width: 60px;
+      width: 60px; /* Size of each button */
       height: 60px;
       margin: 5px;
-      font-size: 24px;
+      font-size: 24px; /* Font size for arrows */
       text-align: center;
-      line-height: 60px;
-      background-color: #ffcc00;
-      border: 2px solid #000;
-      border-radius: 10px;
-      cursor: pointer;
-      user-select: none;
+      line-height: 60px; /* Center text vertically */
+      background-color: #ffcc00; /* Button color */
+      border-radius: 10px; /* Rounded corners */
+      border: none; /* Remove default border */
     }
+
+    .control-button:hover {
+      background-color: #ffaa00; /* Hover effect for buttons */
+    }
+
     .control-button:active {
-      background-color: #ffaa00;
+      background-color: #ff9900; /* Active state effect */
     }
-  </style>
-</head>
-<body>
 
-<div id="shim">shim for font face</div>
-
-<h1>HTML5 Pacman</h1>
-
-<div id="pacman"></div>
-
-<!-- Mobile Controls -->
-<div id="mobile-controls">
-  <div class="controls-row">
-    <div class="control-button" id="up">▲</div>
-  </div>
-  <div class="controls-row">
-    <div class="control-button" id="left">◀</div>
-    <div style="width: 60px;"></div> <!-- Spacer -->
-    <div class="control-button" id="right">▶</div>
-  </div>
-  <div class="controls-row">
-    <div class="control-button" id="down">▼</div>
-  </div>
-</div>
-
-<script src='//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js'></script>
-<script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-<script src="./script.js"></script>
-
-<script>
-  // Add touch controls for mobile
-  document.getElementById("up").addEventListener("click", () => movePacman("up"));
-  document.getElementById("down").addEventListener("click", () => movePacman("down"));
-  document.getElementById("left").addEventListener("click", () => movePacman("left"));
-  document.getElementById("right").addEventListener("click", () => movePacman("right"));
-
-  function movePacman(direction) {
-    // This function needs to be implemented in script.js
-    if (typeof handleMobileInput === "function") {
-      handleMobileInput(direction);
-    } else {
-      console.warn("handleMobileInput function is not defined.");
-    }
-  }
-</script>
-
-</body>
-</html>
+    /* Responsive Styles for Mobile Devices */
+    @media only screen and (max-width: 768px) {
+      
+        body {
+            width:auto;margin-left:auto;margin-right:auto
+        }
